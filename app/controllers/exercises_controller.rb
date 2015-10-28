@@ -15,7 +15,7 @@ class ExercisesController < ApplicationController
   def create
     @exercise = Exercise.new(exercise_params)
     if @exercise.save
-      redirect_to exercises_path
+      redirect_to root_path
     else
       render 'new'
     end
@@ -28,7 +28,7 @@ class ExercisesController < ApplicationController
   def update
     @exercise = Exercise.find(params[:id])
     if @exercise.update(exercise_params)
-      redirect_to exercises_path
+      redirect_to root_path
     else
       render 'edit'
     end
@@ -37,7 +37,7 @@ class ExercisesController < ApplicationController
   def destroy
     @exercise = Exercise.find(params[:id])
     @exercise.destroy
-    redirect_to exercises_path
+    redirect_to root_path
   end
 
   private

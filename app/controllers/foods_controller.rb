@@ -15,7 +15,7 @@ class FoodsController < ApplicationController
   def create
     @food = Food.new(food_params)
     if @food.save
-      redirect_to foods_path
+      redirect_to root_path
     else
       render 'new'
     end
@@ -24,7 +24,7 @@ class FoodsController < ApplicationController
   def destroy
     @food = Food.find(params[:id])
     @food.destroy
-    redirect_to foods_path
+    redirect_to root_path
   end
 
   def edit
@@ -34,7 +34,7 @@ class FoodsController < ApplicationController
   def update
     @food = Food.find(params[:id])
     if @food.update(food_params)
-      redirect_to foods_path
+      redirect_to root_path
     else
       render 'edit'
     end
