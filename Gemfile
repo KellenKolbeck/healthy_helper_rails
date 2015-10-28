@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'devise'
 gem 'rails'
 gem 'pg'
 gem 'bootstrap-sass', '~> 3.3.5'
