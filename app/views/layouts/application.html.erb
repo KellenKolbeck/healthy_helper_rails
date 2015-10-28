@@ -7,8 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="jumbotron">
+    <center><h1>HealthyHelper</h1></center>
+  </div>
   <div class="container">
     <%= yield %>
   </div>
+  <br><br><hr>
+    <center><%= link_to "Home", root_path %></center>
 </body>
 </html>

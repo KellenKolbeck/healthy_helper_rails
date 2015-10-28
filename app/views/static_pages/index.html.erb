@@ -1,4 +1,17 @@
 
+<div class= "col-xs-6">
+  <h1>Foods:</h1>
+
+  <% @foods.each do |food| %>
+    <%= food.name.split(" ").map(&:capitalize).join(" ") %> <%= link_to "Edit", edit_food_path(food), id:"edit_food_button", remote: true %>
+    <%= link_to "Delete", food_path(food), :data => {confirm: "Are Your Sure?", method: "delete"}, class: "btn btn-danger" %>
+  <% end %>
+  <%= link_to "New Food", new_food_path %>
+</div>
+
+
+
+
 <div class="col-xs-6">
   <h1>Exercise</h1>
 

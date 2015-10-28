@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'exercises#index'
+  root 'static_pages#index'
   resources :exercises
   resources :foods
   # The priority is based upon order of creation: first created -> highest priority.
