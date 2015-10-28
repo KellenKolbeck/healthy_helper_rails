@@ -5,4 +5,8 @@ class Food < ActiveRecord::Base
   validates :category, presence: true
   validates :healthy, presence: true
 
+  default_scope {
+    order('name ASC')
+  }
+
 end
