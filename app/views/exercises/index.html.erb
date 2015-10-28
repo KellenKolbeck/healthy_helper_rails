@@ -1,0 +1,10 @@
+<h1>Exercise</h1>
+
+
+<% @exercises.each do |exercise| %>
+  <%= exercise.name %> <%= link_to "Edit", edit_exercise_path(exercise) %>
+  <br>
+<% end %>
+
+
+<%= link_to "New Exercise", new_exercise_path %>

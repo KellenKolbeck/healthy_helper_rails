@@ -1,0 +1,13 @@
+<%= render 'layouts/errors', :object => @food %>
+
+<%= form_for @food do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :calories %>
+  <%= f.text_field :calories %>
+  <%= f.label :category %>
+  <%= f.text_field :category %>
+  <%= f.label :healthy %>
+  <%= f.text_field :healthy %>
+  <%= f.submit  %>
+<% end %>
