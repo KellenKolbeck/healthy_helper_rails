@@ -1,12 +1,12 @@
 <table class="food">
   <tr>
-    <th>Name</th>
-    <th>Calories</th>
-    <th>Category</th>
+    <th><%= sortable "name" %></th>
+    <th><%= sortable "calories" %></th>
+    <th><%= sortable "category" %></th>
     <th>Edit</th>
     <th>Delete</th>
   </tr>
-  <% for food in @foods %>
+  <% for food in @foods  %>
   <tr>
     <td class='col-xs-1'><%= food.name %></td>
     <td class='col-xs-1'><%= food.calories %></td>
