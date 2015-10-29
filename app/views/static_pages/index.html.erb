@@ -4,8 +4,8 @@
 
   <% @foods.each do |food| %>
     <%= food.name.split(" ").map(&:capitalize).join(" ") %> : <%= food.calories %> calories consumed
-    <%= link_to "Edit", edit_food_path(food), id:"edit_food_button", remote: true %>
-    <%= link_to "Delete", food_path(food), :data => {confirm: "Are Your Sure?", method: "delete"} %>
+    <%= link_to "Edit Food", edit_food_path(food), id:"edit_food_button", remote: true %>
+    <%= link_to "Delete Food", food_path(food), :data => {confirm: "Are Your Sure?", method: "delete"} %>
     <br>
     <br>
   <% end %>
@@ -21,8 +21,8 @@
 
   <% @exercises.each do |exercise| %>
     <%= exercise.name.split(" ").map(&:capitalize).join(" ") %> : <%= exercise.calories %> calories burned
-    <%= link_to "Edit", edit_exercise_path(exercise), id:"edit_exercise_button", remote: true %>
-    <%= link_to "Delete", exercise_path(exercise), :data => {confirm: "Are Your Sure?", method: "delete"} %>
+    <%= link_to "Edit Exercise", edit_exercise_path(exercise), id:"edit_exercise_button", remote: true %>
+    | <%= link_to "Delete Exercise", exercise_path(exercise), :data => {confirm: "Are Your Sure?", method: "delete"} %>
     <br>
     <br>
   <% end %>

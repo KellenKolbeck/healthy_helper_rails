@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'devise'
 gem 'rails'
@@ -21,11 +21,14 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
+  gem 'database_cleaner'
 end
 
 group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem 'poltergeist'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
   gem 'factory_girl_rails'
   gem 'simplecov', require: false
 end
