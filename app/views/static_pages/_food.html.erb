@@ -1,8 +1,8 @@
 <table class="food">
   <tr>
-    <th><%= sortable "name" %></th>
-    <th><%= sortable "calories" %></th>
-    <th><%= sortable "category" %></th>
+    <th><%= link_to "Name", food_sort: "name" %></th>
+    <th><%= link_to "Calories", food_sort: "calories"%></th>
+    <th><%= link_to "Category", food_sort: "category" %></th>
     <th>Edit</th>
     <th>Delete</th>
   </tr>
