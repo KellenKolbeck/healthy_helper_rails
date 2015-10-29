@@ -7,7 +7,6 @@ describe "add food path" do
     fill_in "Name", with: "Grapes"
     fill_in "Calories", with: 100
     fill_in "Category", with: "Fruit"
-    fill_in "Healthy", with: true
     click_on "Create Food"
     expect(page).to have_content "Grapes"
   end

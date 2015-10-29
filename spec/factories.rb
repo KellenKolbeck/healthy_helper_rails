@@ -8,6 +8,6 @@ FactoryGirl.define do
     name('Grapes')
     calories(100)
     category('Fruit')
-    healthy(true)
+
   end
 end

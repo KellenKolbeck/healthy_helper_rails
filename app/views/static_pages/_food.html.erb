@@ -1,0 +1,35 @@
+<table class="food">
+  <tr>
+    <th>Name</th>
+    <th>Calories</th>
+    <th>Category</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <% for food in @foods %>
+  <tr>
+    <td class='col-xs-1'><%= food.name %></td>
+    <td class='col-xs-1'><%= food.calories %></td>
+    <td class='col-xs-1'><%= food.category %></td>
+    <td class='col-xs-1'><%= link_to "Edit Food", edit_food_path(food), id:"edit_food_button", remote: true %></td>
+    <td class='col-xs-1'><%= link_to "Delete Food", food_path(food), :data => {confirm: "Are Your Sure?", method: "delete"} %></td>
+  </tr>
+  <% end %>
+</table>
+
+
+<%= will_paginate @foods %>
+
+
+
+
+
+<!--
+<% @foods.each do |food| %>
+  <%= food.name.split(" ").map(&:capitalize).join(" ") %> : <%= food.calories %> calories consumed
+  <%= link_to "Edit Food", edit_food_path(food), id:"edit_food_button", remote: true %>
+  <%= link_to "Delete Food", food_path(food), :data => {confirm: "Are Your Sure?", method: "delete"} %>
+  <br>
+  <br>
+
+<% end %> -->

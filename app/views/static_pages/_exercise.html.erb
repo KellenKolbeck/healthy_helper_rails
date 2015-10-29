@@ -1,0 +1,32 @@
+<table class="exercise">
+  <tr>
+    <th>Name</th>
+    <th>Calories</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <% for exercise in @exercises %>
+  <tr>
+    <td class='col-xs-1'><%= exercise.name %></td>
+    <td class='col-xs-1'><%= exercise.calories %></td>
+    <td class='col-xs-1'><%= link_to "Edit Exercise", edit_exercise_path(exercise), id:"edit_exercise_button", remote: true %></td>
+    <td class='col-xs-1'><%= link_to "Delete Exercise", exercise_path(exercise), :data => {confirm: "Are Your Sure?", method: "delete"} %></td>
+  </tr>
+  <% end %>
+</table>
+
+
+<%= will_paginate @exercises %>
+
+
+
+
+
+<!--
+<% @exercises.each do |exercise| %>
+  <%= exercise.name.split(" ").map(&:capitalize).join(" ") %> : <%= exercise.calories %> calories burned
+  <%= link_to "Edit Exercise", edit_exercise_path(exercise), id:"edit_exercise_button", remote: true %>
+  | <%= link_to "Delete Exercise", exercise_path(exercise), :data => {confirm: "Are Your Sure?", method: "delete"} %>
+  <br>
+  <br>
+<% end %> -->
